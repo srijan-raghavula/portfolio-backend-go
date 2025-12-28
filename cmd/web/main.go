@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	"log/slog"
 	"net/http"
 	"os"
@@ -12,7 +11,7 @@ type application struct {
 }
 
 func main() {
-	addr := fmt.Sprintf(":4040")
+	addr := ":4040"
 	logger := slog.New(slog.NewTextHandler(os.Stdout, nil))
 	app := &application{
 		logger: logger,
